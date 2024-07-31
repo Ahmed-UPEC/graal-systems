@@ -29,37 +29,38 @@ import {
 
 import Link from "next/link";
 
-function getWindowDimensions() {
-  if (window === undefined) return { width: 0, height: 0 };
-  else {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
-}
-
 export default function TopBar() {
   const [isClient, setIsClient] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  const getWindowDimensions = () => {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  };
+
+  function handleResize() {
+    setWindowDimensions(getWindowDimensions());
+  }
 
   useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
+    setIsClient(true);
+  }, []);
 
+  useEffect(() => {
     if (isClient) {
       window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     }
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isClient]);
 
   return (
     <>
