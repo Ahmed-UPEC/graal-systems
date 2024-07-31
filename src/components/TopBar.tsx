@@ -41,6 +41,8 @@ function getWindowDimensions() {
 }
 
 export default function TopBar() {
+  const [isClient, setIsClient] = useState(false);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [windowDimensions, setWindowDimensions] = useState(
@@ -52,7 +54,10 @@ export default function TopBar() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener("resize", handleResize);
+    if (isClient) {
+      window.addEventListener("resize", handleResize);
+    }
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
