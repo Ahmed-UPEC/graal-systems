@@ -194,72 +194,6 @@ export default function TopBar() {
   );
 }
 
-function ProductNavigation() {
-  return (
-    <div className="flex flex-col gap-3 p-4 md:w-[500px] lg:w-[600px] xl:w-max xl:max-w-[800px] cursor-default">
-      <div className="grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For data engineer and Devops
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Serverless computing</li>
-            <li>From edge to cloud : deploy anywhere</li>
-            <li>Cross-version projects testing</li>
-            <li>Backward compatibility for Hadoop and SAS</li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For data scientist and MLops
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>GPU native, the easy way</li>
-            <li>The extensive stack</li>
-            <li>Focused on productivity</li>
-            <li>Day-1 production for models deployment</li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For business and data analyst
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Limitless no-code</li>
-            <li>Collaboration at scale</li>
-            <li>Dashboard and BI</li>
-            <li>Data mest</li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For data office... and others
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Governance for everyone</li>
-            <li>Data quality and compliance</li>
-            <li>Integrated with your tools</li>
-            <li>Fine grained FinOps</li>
-          </ul>
-        </div>
-      </div>
-      <hr />
-      <div className="flex flex-col gap-3">
-        <h2 className="font-bold">See how Graal compared with</h2>
-        <div className="grid grid-cols-4 place-items-center">
-          <p>
-            We made it easy to get an honest view of how GraalSystems compares
-            to other platform.
-          </p>
-          <p>Vs Databricks</p>
-          <p>Vs Cloudera</p>
-          <p>Vs Snowflake</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function ProductNavigationResponsive() {
   return (
     <div className="flex flex-col gap-3 cursor-default">
@@ -415,6 +349,72 @@ function UseCasesNavigationResponsive() {
         <ul className="list-none flex flex-col gap-2 text-xs">
           <li>EcoOps</li>
         </ul>
+      </div>
+    </div>
+  );
+}
+
+function ProductNavigation() {
+  return (
+    <div className="flex flex-col gap-3 p-4 md:w-[500px] lg:w-[600px] xl:w-max xl:max-w-[750px] cursor-default">
+      <div className="grid gap-3 grid-cols-4">
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For data engineer and Devops
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-xs">
+            <li>Serverless computing</li>
+            <li>From edge to cloud : deploy anywhere</li>
+            <li>Cross-version projects testing</li>
+            <li>Backward compatibility for Hadoop and SAS</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For data scientist and MLops
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-xs">
+            <li>GPU native, the easy way</li>
+            <li>The extensive stack</li>
+            <li>Focused on productivity</li>
+            <li>Day-1 production for models deployment</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For business and data analyst
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-xs">
+            <li>Limitless no-code</li>
+            <li>Collaboration at scale</li>
+            <li>Dashboard and BI</li>
+            <li>Data mest</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For data office... and others
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-xs">
+            <li>Governance for everyone</li>
+            <li>Data quality and compliance</li>
+            <li>Integrated with your tools</li>
+            <li>Fine grained FinOps</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div className="flex flex-col gap-3">
+        <h2 className="font-bold">See how Graal compared with</h2>
+        <div className="grid grid-cols-4">
+          <p>
+            We made it easy to get an honest view of how GraalSystems compares
+            to other platform.
+          </p>
+          <p>Vs Databricks</p>
+          <p>Vs Cloudera</p>
+          <p>Vs Snowflake</p>
+        </div>
       </div>
     </div>
   );
