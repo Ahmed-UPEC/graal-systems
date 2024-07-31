@@ -30,11 +30,14 @@ import {
 import Link from "next/link";
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
+  if (window === undefined) return { width: 0, height: 0 };
+  else {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  }
 }
 
 export default function TopBar() {
@@ -43,8 +46,6 @@ export default function TopBar() {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
-
-  console.log(windowDimensions);
 
   useEffect(() => {
     function handleResize() {
