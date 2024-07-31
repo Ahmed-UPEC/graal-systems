@@ -74,17 +74,17 @@ function GridHero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="h-[calc(100vh-64px)]  w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-large-black/[0.05] relative flex items-center justify-center"
+      className="h-[calc(100vh-64px)] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-large-black/[0.05] relative flex items-center justify-center"
     >
       {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       {/* <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
         Backgrounds
       </p> */}
       <div className="flex flex-col items-center gap-16">
         <div className="flex flex-col items-center gap-6">
           <p className="text-4xl sm:text-7xl font-bold">Graal Systems</p>
-          <span className="text-2xl sm:text-5xl font-bold">
+          <span className="text-2xl sm:text-5xl font-bold text-center">
             Your next generation
             <FlipWords
               className="text-fuchsia-500"
@@ -173,7 +173,7 @@ export function Features() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0 }}
-        className="max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.25] overflow-hidden"
+        className="mx-auto max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.25] overflow-hidden"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div>
         <div className="relative z-10 flex flex-col gap-4">
@@ -193,7 +193,7 @@ export function Features() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.25] overflow-hidden"
+        className="mx-auto max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.2] overflow-hidden"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div>
         <div className="relative z-10 flex flex-col gap-4">
@@ -214,7 +214,7 @@ export function Features() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.25] overflow-hidden"
+        className="mx-auto max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.25] overflow-hidden"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div>
         <div className="relative z-10 flex flex-col gap-4">
@@ -234,7 +234,7 @@ export function Features() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 1.5 }}
-        className="max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.25] overflow-hidden"
+        className="mx-auto max-w-[300px] relative p-8 border border-neutral-200 rounded-xl dark:bg-grid-white/[0.2] bg-dot-neutral-500/[0.25] overflow-hidden"
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div>
         <div className="relative z-10 flex flex-col gap-4">
