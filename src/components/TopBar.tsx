@@ -29,7 +29,11 @@ import {
 
 import Link from "next/link";
 
-export default function TopBar() {
+interface TopBarProps {
+  preTopBar?: boolean;
+}
+
+export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
   const [isClient, setIsClient] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,6 +69,24 @@ export default function TopBar() {
 
   return (
     <>
+      {preTopBar && (
+        <div className="bg-black text-white p-3">
+          <ul className="flex flex-col items-center sm:flex-row sm:gap-6 gap-1 list-none">
+            <li className="flex gap-2 items-center">
+              <Icon icon="mdi:phone" />
+              +33 1 39 49 58 39
+            </li>
+            <li className="flex gap-2 items-center">
+              <Icon icon="mdi:at" />
+              contact@graal.systems
+            </li>
+            <li className="flex gap-2 items-center">
+              <Icon icon="ion:location-sharp" />
+              Annecy
+            </li>
+          </ul>
+        </div>
+      )}
       {windowDimensions.width > 1024 ? (
         <motion.div
           initial={{ y: -100 }}
@@ -72,7 +94,9 @@ export default function TopBar() {
           transition={{ duration: 0.5 }}
           className="container mx-auto flex justify-around items-center py-8"
         >
-          <img src={logo.src} alt="Single" className="max-w-24" />
+          <Link href={"/"}>
+            <img src={logo.src} alt="Single" className="max-w-24" />
+          </Link>
           <ul className="text-sm hover:cursor-pointer">
             <NavigationMenu>
               <NavigationMenuList>
@@ -149,7 +173,9 @@ export default function TopBar() {
           transition={{ duration: 0.5 }}
           className="container mx-auto flex justify-between items-center py-8"
         >
-          <img src={logo.src} alt="Single" className="max-w-24" />
+          <Link href={"/"}>
+            <img src={logo.src} alt="Single" className="max-w-24" />
+          </Link>
 
           <Icon
             icon="gg:menu-right"
@@ -259,9 +285,10 @@ function ProductNavigationResponsive() {
             We made it easy to get an honest view of how GraalSystems compares
             to other platform.
           </p>
-          <p>Vs Databricks</p>
-          <p>Vs Cloudera</p>
-          <p>Vs Snowflake</p>
+
+          <Link href={"/comparison/databricks"}>Vs Databricks</Link>
+          <Link href={"/comparison/cloudera"}>Vs Cloudera</Link>
+          <Link href={"/comparison/snowflake"}>Vs Snowflake</Link>
         </div>
       </div>
     </div>
@@ -419,9 +446,9 @@ function ProductNavigation() {
             We made it easy to get an honest view of how GraalSystems compares
             to other platform.
           </p>
-          <p>Vs Databricks</p>
-          <p>Vs Cloudera</p>
-          <p>Vs Snowflake</p>
+          <Link href={"/comparison/databricks"}>Vs Databricks</Link>
+          <Link href={"/comparison/cloudera"}>Vs Cloudera</Link>
+          <Link href={"/comparison/snowflake"}>Vs Snowflake</Link>
         </div>
       </div>
     </div>
