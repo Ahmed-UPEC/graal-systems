@@ -173,7 +173,7 @@ function PageTable() {
 
             <TableRow>
               <TableCell className="font-medium border-r border-b">
-                "zero-copy" externalsecrets
+                &quot;zero-copy&quot; externalsecrets
               </TableCell>
               <TableCell className="border-r border-b">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin

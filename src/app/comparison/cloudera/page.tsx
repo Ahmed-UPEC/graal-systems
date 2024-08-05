@@ -145,7 +145,7 @@ function PageTable() {
 
             <TableRow>
               <TableCell className="font-medium border-r border-b">
-                Managing "zero-copy" external secrets
+                Managing &quot;zero-copy&quot; external secrets
               </TableCell>
               <TableCell className="border-r border-b">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
