@@ -837,7 +837,7 @@ function SupportedRuntimes() {
 
 function Trust() {
   return (
-    <div className="container mx-auto my-24" id="trust">
+    <div className="container mx-auto my-24 mb-32" id="trust">
       <h1 className="col-span-2 mb-16 text-center text-2xl sm:text-5xl font-semibold">
         They trust us
       </h1>

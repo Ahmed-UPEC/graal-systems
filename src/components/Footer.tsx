@@ -1,7 +1,24 @@
-export default function Footer() {
+import { Icon } from "@iconify/react/dist/iconify.js";
+
+interface FooterProps {
+  callToActionBanner: boolean;
+}
+
+export default function Footer({ callToActionBanner }: Readonly<FooterProps>) {
   return (
-    <div className="bg-black">
-      <div className="grid grid-cols-4 gap-8 text-neutral-400 py-12 px-24 container mx-auto">
+    <div className="bg-black relative">
+      {callToActionBanner && (
+        <div className="w-8/12 h-24 absolute bg-fuchsia-500 left-0 right-0 -top-12 mx-auto flex justify-between items-center px-12 rounded-xl">
+          <p className="font-semibold text-white text-lg">
+            Get started with Graal Systems
+          </p>
+          <button className="bg-white py-2 px-4 rounded-md flex gap-2 items-center">
+            Start Building
+            <Icon icon="akar-icons:arrow-right" className="text-black" />
+          </button>
+        </div>
+      )}
+      <div className="grid grid-cols-4 gap-8 text-neutral-400 py-12 pt-24 px-24 container mx-auto">
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-bold text-white">Graal Systems</h1>
           <p>
@@ -49,7 +66,16 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <small>Version Alpha</small>
+          <small>
+            <a
+              href="https://ahmed-cv.web.app/"
+              target="_blank"
+              className="hover:no-underline text-white flex gap-2 items-center"
+            >
+              developed by Ahmed
+              <Icon icon="akar-icons:link-out" className="text-white" />
+            </a>
+          </small>
         </div>
       </div>
     </div>

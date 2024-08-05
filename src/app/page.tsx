@@ -10,7 +10,7 @@ export default function page() {
       {/* Main page */}
       <Main />
       {/* Footer */}
-      <Footer />
+      <Footer callToActionBanner={true} />
     </div>
   );
 }
