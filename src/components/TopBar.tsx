@@ -57,6 +57,7 @@ export default function TopBar() {
 
   useEffect(() => {
     if (isClient) {
+      handleResize();
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
     }
