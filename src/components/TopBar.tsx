@@ -69,101 +69,105 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
 
   return (
     <>
-      {preTopBar && (
-        <div className="bg-black text-white p-3">
-          <ul className="flex flex-col items-center sm:flex-row sm:gap-6 gap-1 list-none">
-            <li className="flex gap-2 items-center">
-              <Icon icon="mdi:phone" />
-              +33 1 39 49 58 39
-            </li>
-            <li className="flex gap-2 items-center">
-              <Icon icon="mdi:at" />
-              contact@graal.systems
-            </li>
-            <li className="flex gap-2 items-center">
-              <Icon icon="ion:location-sharp" />
-              Annecy
-            </li>
-          </ul>
-        </div>
-      )}
       {windowDimensions.width > 1024 ? (
         <motion.div
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
-          className="container mx-auto flex justify-around items-center py-8"
         >
-          <Link href={"/"}>
-            <img src={logo.src} alt="Single" className="max-w-24" />
-          </Link>
-          <ul className="text-sm hover:cursor-pointer">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:bg-transparent">
-                    Product
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ProductNavigation />
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:bg-transparent">
-                    Use Cases
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <UseCasesNavigation />
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+          {preTopBar && (
+            <div className="bg-black text-white p-3">
+              <ul className="flex flex-col items-center sm:flex-row sm:gap-6 gap-1 list-none">
+                <li className="flex gap-2 items-center">
+                  <Icon icon="mdi:phone" />
+                  +33 1 39 49 58 39
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Icon icon="mdi:at" />
+                  contact@graal.systems
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Icon icon="ion:location-sharp" />
+                  Annecy
+                </li>
+              </ul>
+            </div>
+          )}
+          <div className="container mx-auto flex justify-around items-center py-8">
+            <Link href={"/"}>
+              <img src={logo.src} alt="Single" className="max-w-24" />
+            </Link>
+            <ul className="text-sm hover:cursor-pointer">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="hover:bg-transparent">
+                      Product
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ProductNavigation />
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="hover:bg-transparent">
+                      Use Cases
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <UseCasesNavigation />
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <Link href="/docs" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
+                  <NavigationMenuItem>
+                    <Link
+                      href="https://docs.dev.graal.systems/"
+                      target="_blank"
                     >
-                      Ressources
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/docs" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Pricing
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/docs" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      About
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </ul>
-          <div className="flex gap-2">
-            <button className="text-sm bg-fuchsia-500 text-white rounded-3xl px-4 py-2 flex items-center gap-2">
-              Book a demo{" "}
-              <Icon
-                icon="flowbite:chevron-right-outline"
-                width={16}
-                strokeWidth={3.5}
-              />
-            </button>
-            <button className="text-sm bg-black text-white rounded-3xl px-4 py-2 flex items-center gap-2">
-              Login{" "}
-              <Icon
-                icon="material-symbols:login"
-                width={16}
-                strokeWidth={3.5}
-              />
-            </button>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
+                        Ressources
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="/pricing">
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
+                        Pricing
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="/about">
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
+                        About
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </ul>
+            <div className="flex gap-2">
+              <button className="text-sm bg-fuchsia-500 text-white rounded-3xl px-4 py-2 flex items-center gap-2">
+                Book a demo{" "}
+                <Icon
+                  icon="flowbite:chevron-right-outline"
+                  width={16}
+                  strokeWidth={3.5}
+                />
+              </button>
+              <button className="text-sm bg-black text-white rounded-3xl px-4 py-2 flex items-center gap-2">
+                Login{" "}
+                <Icon
+                  icon="material-symbols:login"
+                  width={16}
+                  strokeWidth={3.5}
+                />
+              </button>
+            </div>
           </div>
         </motion.div>
       ) : (
@@ -216,9 +220,15 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-                <p className="py-4 font-medium border-b">Ressources</p>
-                <p className="py-4 font-medium border-b">Pricing</p>
-                <p className="py-4 font-medium">About</p>
+                <Link
+                  href="https://docs.dev.graal.systems/"
+                  className="py-4 font-medium border-b block"
+                  target="_blank"
+                >
+                  Ressources
+                </Link>
+                <p className="py-4 font-medium border-b block">Pricing</p>
+                <p className="py-4 font-medium block">About</p>
               </motion.div>
             </div>
           )}

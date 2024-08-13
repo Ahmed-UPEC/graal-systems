@@ -8,17 +8,19 @@ export default function Footer({ callToActionBanner }: Readonly<FooterProps>) {
   return (
     <div className="bg-black relative">
       {callToActionBanner && (
-        <div className="w-10/12 lg:w-8/12 h-28 lg:h-24 absolute bg-fuchsia-500 left-0 right-0 -top-12 mx-auto flex flex-col md:flex-row justify-between items-center py-3 md:py-0 md:px-12 rounded-xl">
-          <p className="font-semibold text-white text-lg">
-            Start Building the future with Graal Systems
-          </p>
-          <button className="bg-white py-2 px-4 rounded-md flex gap-2 items-center hover:bg-black transition-all duration-300 hover:text-white">
-            Get started
-            <Icon icon="akar-icons:arrow-right" />
-          </button>
+        <div className="hidden sm:block">
+          <div className="w-10/12 lg:w-8/12 h-28 lg:h-24 absolute bg-fuchsia-500 left-0 right-0 -top-12 mx-auto flex flex-col md:flex-row justify-between items-center py-3 md:py-0 md:px-12 rounded-xl">
+            <p className="font-semibold text-white text-lg">
+              Start Building the future with Graal Systems
+            </p>
+            <button className="bg-white py-2 px-4 rounded-md flex gap-2 items-center hover:bg-black transition-all duration-300 hover:text-white">
+              Get started
+              <Icon icon="akar-icons:arrow-right" />
+            </button>
+          </div>
         </div>
       )}
-      <div className="grid grid-cols-4 gap-8 text-neutral-400 py-12 pt-24 px-24 container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-neutral-400 py-12 pt-24 px-24 container mx-auto">
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-bold text-white">Graal Systems</h1>
           <p>

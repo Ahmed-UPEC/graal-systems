@@ -1,5 +1,9 @@
+"use client";
+
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
+
+import { motion } from "framer-motion";
 
 export default function ComparisonLayout({
   children,
@@ -9,7 +13,14 @@ export default function ComparisonLayout({
   return (
     <div>
       <TopBar preTopBar={true} />
-      {children}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.75 }}
+        viewport={{ once: true }}
+      >
+        {children}
+      </motion.div>
       <Footer callToActionBanner={true} />
     </div>
   );
