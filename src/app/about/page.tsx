@@ -4,6 +4,9 @@ import TopBar from "@/components/TopBar";
 import about from "../../assets/illustration/about.png";
 import logo from "../../assets/sigle-black.svg";
 
+import charles from "../../assets/charles.jpeg";
+import vincent from "../../assets/vincent.jpeg";
+
 export default function Page() {
   return (
     <div>
@@ -51,7 +54,7 @@ function PageAbout() {
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-full max-w-[95%] lg:max-w-[80%] py-16 gap-8">
         <div className="flex flex-col gap-2 items-center justify-start rounded-3xl mx-auto border border-neutral-100 bg-neutral-50 hover:shadow-lg hover:shadow-fuchsia-200 transition-all duration-300 py-6 px-4 ">
           <img
-            src="https://graal-systems-1564.version-beta.com/wp-content/uploads/2023/10/charles-thegem-person.jpeg"
+            src={charles.src}
             alt="Charles profil"
             className="rounded-full max-w-[250px] mx-auto border-b-4 border-fuchsia-500"
           ></img>
@@ -73,7 +76,7 @@ function PageAbout() {
         </div>
         <div className="flex flex-col gap-2 items-center justify-start rounded-3xl mx-auto border border-neutral-100 bg-neutral-50 hover:shadow-lg hover:shadow-fuchsia-200 transition-all duration-300 py-6 px-4 ">
           <img
-            src="https://graal-systems-1564.version-beta.com/wp-content/uploads/2023/10/vincent-thegem-person.jpeg"
+            src={vincent.src}
             alt="Vincent profil"
             className="rounded-full max-w-[250px] mx-auto border-b-4 border-fuchsia-500"
           ></img>
