@@ -11,7 +11,9 @@ export default function Contact() {
     <div className="grid grid-cols-1 xl:grid-cols-3 mx-auto w-10/12 sm:w-8/12 xl:w-9/12 my-24 gap-4 items-stretch">
       <div className="flex flex-col gap-2 justify-between">
         <h2 className="font-semibold text-2xl">Contact us</h2>
-        <p className="text-base my-2">Let's make something awesome together</p>
+        <p className="text-base my-2">
+          Let&apos;s make something awesome together
+        </p>
         <button className="text-left p-2 pl-4 rounded-md text-lg bg-fuchsia-500 w-fit text-white flex items-center gap-4">
           <Icon icon="mdi:phone" />
           +33 1 39 49 58 39
