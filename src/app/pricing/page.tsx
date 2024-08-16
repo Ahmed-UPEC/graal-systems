@@ -14,7 +14,6 @@ import {
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -203,6 +202,53 @@ function PagePricingPlanAccordeon() {
           </AccordionTrigger>
           <AccordionContent>
             <PagePricingPlanAccordeonGPU />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+
+      <div className="mx-auto max-w-[70%] my-8 text-center flex flex-col gap-4 pb-8">
+        <h2 className="text-2xl font-semibold text-fuchsia-500">F.A.Q</h2>
+      </div>
+
+      <Accordion
+        type="single"
+        collapsible
+        className="grid grid-cols-1 lg:grid-cols-2 gap-x-4"
+      >
+        <AccordionItem value="item-generic" className="border-b-0 ">
+          <AccordionTrigger className="text-xl hover:no-underline justify-start">
+            <span className="order-2 ml-4">What is a GCU ?</span>
+          </AccordionTrigger>
+          <AccordionContent>
+            <p>
+              A CGU is the unit used to measure consumption on the Graal
+              platform. The number of GCUs consumed is based on compute engine
+              size and processing time, with processing time measured on a
+              per-second basis
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-memory" className="border-b-0 ">
+          <AccordionTrigger className="text-xl hover:no-underline justify-start">
+            <span className="order-2 ml-4 text-left">
+              How long does it take to deploy Graal Platform for
+              entreprise/private cloud offers ?
+            </span>
+          </AccordionTrigger>
+          <AccordionContent>
+            <p>
+              Our team need 3 weeks to deploy the Graal Platform on
+              Entreprise/Private cloud. This includes auditing the existing
+              configuration, the whole deployment and tests.
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-compute" className="border-b-0 ">
+          <AccordionTrigger className="text-xl hover:no-underline justify-start">
+            <span className="order-2 ml-4">How am i billied ?</span>
+          </AccordionTrigger>
+          <AccordionContent>
+            <PagePricingPlanAccordeonComputeOptimised />
           </AccordionContent>
         </AccordionItem>
       </Accordion>

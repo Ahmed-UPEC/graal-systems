@@ -313,35 +313,35 @@ function UseCasesNavigation() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 md:w-[500px] lg:w-[600px] xl:w-max xl:max-w-[800px] cursor-default">
       <div>
         <h2 className="text-fuchsia-500 font-bold">HealthCare</h2>
-        <ul className="list-none flex flex-col gap-2 text-xs">
+        <ul className="list-none flex flex-col gap-2 text-sm">
           <li>Genomics processing</li>
           <li>Federated computing</li>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Financial services</h2>
-        <ul className="list-none flex flex-col gap-2 text-xs">
+        <ul className="list-none flex flex-col gap-2 text-sm">
           <li>Reduce fraud and risk exposure</li>
           <li>Regulatory compliance</li>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Governement</h2>
-        <ul className="list-none flex flex-col gap-2 text-xs">
+        <ul className="list-none flex flex-col gap-2 text-sm">
           <li>Sovereignty</li>
           <li>Collaborative</li>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Industry</h2>
-        <ul className="list-none flex flex-col gap-2 text-xs">
+        <ul className="list-none flex flex-col gap-2 text-sm">
           <li>Edge computing</li>
           <li>Migration for Hadoop platforms</li>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Defense</h2>
-        <ul className="list-none flex flex-col gap-2 text-xs">
+        <ul className="list-none flex flex-col gap-2 text-sm">
           <li>Command & control, everywhere</li>
         </ul>
       </div>
@@ -404,58 +404,72 @@ function UseCasesNavigationResponsive() {
 
 function ProductNavigation() {
   return (
-    <div className="flex flex-col gap-3 p-4 md:w-[500px] lg:w-[600px] xl:w-max xl:max-w-[750px] cursor-default">
+    <div className="flex flex-col gap-3 p-4 md:w-[500px] lg:w-[600px] xl:w-max xl:max-w-[1060px] cursor-default">
       <div className="grid gap-3 grid-cols-4">
         <div className="flex flex-col gap-3">
           <h2 className="text-fuchsia-500 font-bold">
             For data engineer and Devops
           </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Serverless computing</li>
-            <li>From edge to cloud : deploy anywhere</li>
-            <li>Cross-version projects testing</li>
-            <li>Backward compatibility for Hadoop and SAS</li>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/serverless-computing">
+              Serverless computing
+            </Link>
+            <Link href="/product/edge-to-cloud">
+              From edge to cloud : deploy anywhere
+            </Link>
+            <Link href="/product/cross-version-testing">
+              Cross-version projects testing
+            </Link>
+            <Link href="/product/compatibility-hadoop-sas">
+              Backward compatibility for Hadoop and SAS
+            </Link>
           </ul>
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="text-fuchsia-500 font-bold">
             For data scientist and MLops
           </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>GPU native, the easy way</li>
-            <li>The extensive stack</li>
-            <li>Focused on productivity</li>
-            <li>Day-1 production for models deployment</li>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/gpu-native">GPU native, the easy way</Link>
+            <Link href="/product/extensive-stack">The extensive stack</Link>
+            <Link href="/product/productivity">Focused on productivity</Link>
+            <Link href="/product/models-deployment">
+              Day-1 production for models deployment
+            </Link>
           </ul>
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="text-fuchsia-500 font-bold">
             For business and data analyst
           </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Limitless no-code</li>
-            <li>Collaboration at scale</li>
-            <li>Dashboard and BI</li>
-            <li>Data mest</li>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/limitless-no-code">Limitless no-code</Link>
+            <Link href="/product/collaboration-at-scale">
+              Collaboration at scale
+            </Link>
+            <Link href="/product/dashboards-and-bi">Dashboard and BI</Link>
+            <Link href="/product/data-mesh">Data mest</Link>
           </ul>
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="text-fuchsia-500 font-bold">
             For data office... and others
           </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Governance for everyone</li>
-            <li>Data quality and compliance</li>
-            <li>Integrated with your tools</li>
-            <li>Fine grained FinOps</li>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/governance">Governance for everyone</Link>
+            <Link href="/product/data-quality-and-compliance">
+              Data quality and compliance
+            </Link>
+            <Link href="/product/integrated">Integrated with your tools</Link>
+            <Link href="/product/finops">Fine grained FinOps</Link>
           </ul>
         </div>
       </div>
       <hr />
       <div className="flex flex-col gap-3">
         <h2 className="font-bold">See how Graal compared with</h2>
-        <div className="grid grid-cols-4">
-          <p>
+        <div className="grid grid-cols-5">
+          <p className="col-span-2">
             We made it easy to get an honest view of how GraalSystems compares
             to other platform.
           </p>
