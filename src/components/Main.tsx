@@ -10,6 +10,7 @@ import { FloatingNav } from "./ui/floating-navbar";
 
 import { motion } from "framer-motion";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+import Link from "next/link";
 
 export default function Main() {
   const navItems = [
@@ -90,9 +91,13 @@ function GridHero() {
         <p className="text-xl sm:text-xl font-semibold">
           Deploying AI and Data processing can be simple
         </p>
-        <button className="text-lg font-normal bg-black text-white rounded-3xl py-2 px-4 flex gap-3 items-center">
-          <Icon icon="material-symbols:login" width={20} /> Getting started
-        </button>
+        <Link
+          href="/contact"
+          className="text-base xl:text-lg font-normal bg-black text-white rounded-3xl py-2 px-6 flex gap-4 items-center"
+        >
+          <Icon icon="material-symbols:login" />
+          <span>Getting started</span>
+        </Link>
       </div>
     </motion.div>
   );

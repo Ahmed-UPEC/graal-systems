@@ -151,14 +151,17 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
               </NavigationMenu>
             </ul>
             <div className="flex gap-2">
-              <button className="text-sm bg-fuchsia-500 text-white rounded-3xl px-4 py-2 flex items-center gap-2">
-                Book a demo{" "}
+              <Link
+                href="/contact"
+                className="text-sm bg-fuchsia-500 text-white rounded-3xl px-4 py-2 flex items-center gap-2"
+              >
+                <span>Book a demo</span>{" "}
                 <Icon
                   icon="flowbite:chevron-right-outline"
                   width={16}
                   strokeWidth={3.5}
                 />
-              </button>
+              </Link>
               <button className="text-sm bg-black text-white rounded-3xl px-4 py-2 flex items-center gap-2">
                 Login{" "}
                 <Icon

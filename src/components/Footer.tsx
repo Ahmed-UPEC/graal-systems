@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Link from "next/link";
 
 interface FooterProps {
   callToActionBanner: boolean;
@@ -13,10 +14,12 @@ export default function Footer({ callToActionBanner }: Readonly<FooterProps>) {
             <p className="font-semibold text-white text-lg">
               Start Building the future with Graal Systems
             </p>
-            <button className="bg-white py-2 px-4 rounded-md flex gap-2 items-center hover:bg-black transition-all duration-300 hover:text-white">
-              Get started
-              <Icon icon="akar-icons:arrow-right" />
-            </button>
+            <Link
+              href="/contact"
+              className="text-sm bg-white py-2 px-4 rounded-md flex gap-2 items-center hover:bg-black transition-all duration-300 hover:text-white"
+            >
+              <span>Get started</span> <Icon icon="akar-icons:arrow-right" />
+            </Link>
           </div>
         </div>
       )}
