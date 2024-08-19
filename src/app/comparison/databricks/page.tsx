@@ -23,7 +23,7 @@ export default function Page() {
 
 function PageBanner() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-10/12 xl:w-10/12 text-left pt-0 lg:pt-8 p-8 place-items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto text-left pt-0 lg:pt-8 p-8 place-items-center container">
       <div className="flex flex-col gap-4 order-last lg:order-1">
         <h3 className="font-semibold text-lg md:text-xl lg:text-2xl">
           Lorem ipsum dolor sit amet
@@ -50,7 +50,7 @@ function PageBanner() {
 
 function PageTable() {
   return (
-    <div className="bg-neutral-50 py-4">
+    <div className="bg-neutral-50 py-4 container mx-auto">
       <div className="w-11/12 lg:w-8/12 mx-auto my-8">
         <p className="text-center my-12">
           Data processing workloads are the foundation of your analytics and AI
@@ -194,7 +194,7 @@ function PageTable() {
 function PageInformation() {
   return (
     <div className="bg-neutral-900 text-white pb-16 pt-8">
-      <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto w-11/12 lg:w-8/12 xl:w-10/12 text-left p-4 lg:p-8 place-items-center gap-4 md:gap-0">
+      <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto text-left p-4 lg:p-8 place-items-center gap-4 md:gap-0 container">
         <div className="flex flex-col gap-4">
           <h3 className="font-semibold text-2xl text-fuchsia-500">
             Databricks to GraalSystems Migration Guide

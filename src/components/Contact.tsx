@@ -8,7 +8,7 @@ import { Textarea } from "./ui/textarea";
 
 export default function Contact() {
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-3 mx-auto w-10/12 sm:w-8/12 xl:w-9/12 my-24 gap-4 items-stretch">
+    <div className="grid grid-cols-1 xl:grid-cols-3 mx-auto w-10/12 sm:w-8/12 xl:w-9/12 my-24 gap-4 container">
       <div className="flex flex-col gap-2 justify-between">
         <h2 className="font-semibold text-2xl">Contact us</h2>
         <p className="text-base my-2">

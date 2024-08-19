@@ -36,7 +36,7 @@ export default function Page() {
 
 function PageBanner() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-10/12 xl:w-10/12 text-left pt-0 lg:pt-8 p-8 place-items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-10/12 xl:w-10/12 text-left pt-0 lg:pt-8 p-8 place-items-center container">
       <div className="flex flex-col gap-4 order-last lg:order-1">
         <h3 className="font-semibold text-lg md:text-xl lg:text-2xl">
           Pricing
@@ -63,9 +63,9 @@ function PageBanner() {
 
 function PagePricingPlan() {
   return (
-    <div className="py-16">
+    <div className="py-16 mx-auto container">
       <div className="flex flex-col items-center justify-center">
-        <div className="mx-auto max-w-[55%] text-center flex flex-col gap-4 pb-8">
+        <div className="mx-auto max-w-[60%] text-center flex flex-col gap-4 pb-8">
           <h2 className="text-2xl font-semibold text-fuchsia-500">
             Lorem ipsum dolor sit amet
           </h2>
@@ -76,7 +76,7 @@ function PagePricingPlan() {
             luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto mt-4 max-w-[95%] lg:max-w-[75%] gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto mt-4 container gap-4">
           <div className="bg-fuchsia-200 text-fuchsia-800 rounded-xl p-6 flex flex-col gap-4">
             <img
               src={plan.src}
@@ -139,7 +139,7 @@ function PagePricingPlan() {
 
 function PagePricingPlanAccordeon() {
   return (
-    <div className="mx-auto max-w-[95%] lg:max-w-[75%] pt-16 pb-24">
+    <div className="mx-auto pt-16 pb-24 container">
       <Accordion defaultValue="item-availability" type="single" collapsible>
         <AccordionItem value="item-availability" className="border-b-0">
           <AccordionTrigger className="text-xl hover:no-underline justify-start">

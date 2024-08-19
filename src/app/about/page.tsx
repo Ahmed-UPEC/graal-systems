@@ -22,7 +22,7 @@ export default function Page() {
 
 function PageBanner() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-10/12 xl:w-10/12 text-left pt-0 lg:pt-8 p-8 place-items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto text-left pt-0 lg:pt-8 p-8 place-items-center container">
       <div className="flex flex-col gap-4 order-last lg:order-1">
         <h3 className="font-semibold text-lg md:text-xl lg:text-2xl">
           Founders
@@ -51,7 +51,7 @@ function PageBanner() {
 function PageAbout() {
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-full max-w-[95%] lg:max-w-[80%] py-16 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-full py-16 gap-8 container">
         <div className="flex flex-col gap-2 items-center justify-start rounded-3xl mx-auto border border-neutral-100 bg-neutral-50 hover:shadow-lg hover:shadow-fuchsia-200 transition-all duration-300 py-6 px-4 ">
           <img
             src={charles.src}
@@ -110,7 +110,7 @@ function PageAbout() {
 function PageAbout2() {
   return (
     <div className="bg-neutral-100 py-14">
-      <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto w-full max-w-[95%] lg:max-w-[80%] py-16 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto w-full py-16 gap-8 container">
         <div className="flex flex-col gap-2 items-center justify-start rounded-3xl mx-auto border border-neutral-100 bg-neutral-50 hover:shadow-lg hover:shadow-fuchsia-200 transition-all duration-300 py-6 px-4 ">
           <img
             src={logo.src}
@@ -180,7 +180,7 @@ function PageAbout2() {
 
 function PageTimeline() {
   return (
-    <div className="py-14 mx-auto max-w-[95%] md:max-w-[80%] lg:max-w-[60%]  ">
+    <div className="py-14 mx-auto container">
       <div className="container">
         <h2 className="text-center pb-12 text-3xl font-semibold">
           Timeline at <span className="text-fuchsia-500">Graal Systems</span>

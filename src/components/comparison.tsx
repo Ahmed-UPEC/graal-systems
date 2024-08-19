@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function PageComparison() {
   return (
     <div className="my-12">
-      <div className="mx-auto max-w-[55%] text-center flex flex-col gap-4 pb-8">
+      <div className="mx-auto text-center flex flex-col gap-4 pb-8 container">
         <h2 className="text-2xl font-semibold text-fuchsia-500">
           See how GraalSystems compares
         </h2>
@@ -17,7 +17,7 @@ export default function PageComparison() {
           technologies, and pricing that still makes sense as you scale.
         </p>
       </div>
-      <div className="grid grid-cols-3 mx-auto max-w-[85%] gap-6">
+      <div className="grid max-w-[95%] sm:max-w-[80%]  grid-cols-1 xl:grid-cols-3 mx-auto xl:container gap-6">
         <div className="bg-fuchsia-400 hover:bg-fuchsia-500 transition-all duration-300 px-4 py-8 flex flex-col gap-8 rounded-xl">
           <div className="flex justify-between items-center gap-4 px-4">
             <img src={logo.src} alt="graal illustation" className="max-w-24" />

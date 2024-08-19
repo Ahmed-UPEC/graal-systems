@@ -4,10 +4,12 @@ import TopBar from "@/components/TopBar";
 
 export default function Page() {
   return (
-    <div>
+    <div className="flex flex-col justify-between min-h-screen">
       <TopBar />
       <Contact />
-      <Footer callToActionBanner={true} />
+      <div className="items-stretch">
+        <Footer callToActionBanner={true} />
+      </div>
     </div>
   );
 }

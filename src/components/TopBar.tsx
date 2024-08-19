@@ -93,7 +93,7 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
               </ul>
             </div>
           )}
-          <div className="container mx-auto flex justify-around items-center py-8">
+          <div className="container mx-auto flex justify-between items-center py-8">
             <Link href={"/"}>
               <img src={logo.src} alt="Single" className="max-w-24" />
             </Link>
@@ -162,14 +162,17 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
                   strokeWidth={3.5}
                 />
               </Link>
-              <button className="text-sm bg-black text-white rounded-3xl px-4 py-2 flex items-center gap-2">
+              <Link
+                href="https://console.dev.graal.systems/"
+                className="text-sm bg-black text-white rounded-3xl px-4 py-2 flex items-center gap-2"
+              >
                 Login{" "}
                 <Icon
                   icon="material-symbols:login"
                   width={16}
                   strokeWidth={3.5}
                 />
-              </button>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -238,73 +241,6 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
         </motion.div>
       )}
     </>
-  );
-}
-
-function ProductNavigationResponsive() {
-  return (
-    <div className="flex flex-col gap-3 cursor-default">
-      <div className="grid gap-3 grid-cols-1">
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For data engineer and Devops
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Serverless computing</li>
-            <li>From edge to cloud : deploy anywhere</li>
-            <li>Cross-version projects testing</li>
-            <li>Backward compatibility for Hadoop and SAS</li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For data scientist and MLops
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>GPU native, the easy way</li>
-            <li>The extensive stack</li>
-            <li>Focused on productivity</li>
-            <li>Day-1 production for models deployment</li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For business and data analyst
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Limitless no-code</li>
-            <li>Collaboration at scale</li>
-            <li>Dashboard and BI</li>
-            <li>Data mest</li>
-          </ul>
-        </div>
-        <div className="flex flex-col gap-3">
-          <h2 className="text-fuchsia-500 font-bold">
-            For data office... and others
-          </h2>
-          <ul className="list-none flex flex-col gap-2 text-xs">
-            <li>Governance for everyone</li>
-            <li>Data quality and compliance</li>
-            <li>Integrated with your tools</li>
-            <li>Fine grained FinOps</li>
-          </ul>
-        </div>
-      </div>
-      <hr />
-      <div className="flex flex-col gap-3">
-        <h2 className="font-bold">See how Graal compared with</h2>
-        <div className="grid grid-cols-1 gap-3">
-          <p>
-            We made it easy to get an honest view of how GraalSystems compares
-            to other platform.
-          </p>
-
-          <Link href={"/comparison/databricks"}>Vs Databricks</Link>
-          <Link href={"/comparison/cloudera"}>Vs Cloudera</Link>
-          <Link href={"/comparison/snowflake"}>Vs Snowflake</Link>
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -448,7 +384,7 @@ function ProductNavigation() {
               Collaboration at scale
             </Link>
             <Link href="/product/dashboards-and-bi">Dashboard and BI</Link>
-            <Link href="/product/data-mesh">Data mest</Link>
+            <Link href="/product/data-mesh">Data mesh</Link>
           </ul>
         </div>
         <div className="flex flex-col gap-3">
@@ -473,6 +409,87 @@ function ProductNavigation() {
             We made it easy to get an honest view of how GraalSystems compares
             to other platform.
           </p>
+          <Link href={"/comparison/databricks"}>Vs Databricks</Link>
+          <Link href={"/comparison/cloudera"}>Vs Cloudera</Link>
+          <Link href={"/comparison/snowflake"}>Vs Snowflake</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProductNavigationResponsive() {
+  return (
+    <div className="flex flex-col gap-3 cursor-default">
+      <div className="grid gap-3 grid-cols-1">
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For data engineer and Devops
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/serverless-computing">
+              Serverless computing
+            </Link>
+            <Link href="/product/edge-to-cloud">
+              From edge to cloud : deploy anywhere
+            </Link>
+            <Link href="/product/cross-version-testing">
+              Cross-version projects testing
+            </Link>
+            <Link href="/product/compatibility-hadoop-sas">
+              Backward compatibility for Hadoop and SAS
+            </Link>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For data scientist and MLops
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/gpu-native">GPU native, the easy way</Link>
+            <Link href="/product/extensive-stack">The extensive stack</Link>
+            <Link href="/product/productivity">Focused on productivity</Link>
+            <Link href="/product/models-deployment">
+              Day-1 production for models deployment
+            </Link>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For business and data analyst
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/limitless-no-code">Limitless no-code</Link>
+            <Link href="/product/collaboration-at-scale">
+              Collaboration at scale
+            </Link>
+            <Link href="/product/dashboards-and-bi">Dashboard and BI</Link>
+            <Link href="/product/data-mesh">Data mesh</Link>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="text-fuchsia-500 font-bold">
+            For data office... and others
+          </h2>
+          <ul className="list-none flex flex-col gap-2 text-sm">
+            <Link href="/product/governance">Governance for everyone</Link>
+            <Link href="/product/data-quality-and-compliance">
+              Data quality and compliance
+            </Link>
+            <Link href="/product/integrated">Integrated with your tools</Link>
+            <Link href="/product/finops">Fine grained FinOps</Link>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div className="flex flex-col gap-3">
+        <h2 className="font-bold">See how Graal compared with</h2>
+        <div className="grid grid-cols-1 gap-3">
+          <p>
+            We made it easy to get an honest view of how GraalSystems compares
+            to other platform.
+          </p>
+
           <Link href={"/comparison/databricks"}>Vs Databricks</Link>
           <Link href={"/comparison/cloudera"}>Vs Cloudera</Link>
           <Link href={"/comparison/snowflake"}>Vs Snowflake</Link>

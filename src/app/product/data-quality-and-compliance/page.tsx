@@ -31,7 +31,7 @@ function PageBanner({
   bannerImage,
 }: Readonly<PageBannerProps>) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-10/12 xl:w-10/12 text-left pt-0 lg:pt-8 p-8 place-items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto text-left pt-0 lg:pt-8 p-8 place-items-center container">
       <div className="flex flex-col gap-4 order-last lg:order-1">
         <h3 className="font-semibold text-lg md:text-xl lg:text-2xl">
           {title}
@@ -52,10 +52,9 @@ function PageBanner({
     </div>
   );
 }
-
 function PageHero() {
   return (
-    <div className="grid grid-cols-2 mx-auto max-w-[80%] items-center bg-neutral-50 border border-neutral-200/60 p-8 py-0 rounded-3xl">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto items-center bg-neutral-50 border border-neutral-200/60 p-8 py-8 lg:py-0 rounded-3xl container">
       <p>
         Graal Systems introduces a revolutionary Serverless Computing approach,
         streamlining data processing by eliminating infrastructure complexities.
