@@ -6,6 +6,7 @@ import logo from "../../assets/sigle-black.svg";
 
 import charles from "../../assets/charles.jpeg";
 import vincent from "../../assets/vincent.jpeg";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -35,9 +36,12 @@ function PageBanner() {
           of data, we came up with the idea of launching the concept of a Big
           Data SaaS Platform to solve all problems of data processing.
         </p>
-        <button className="flex justify-start bg-fuchsia-500 text-white py-2 px-4 rounded-md w-fit hover:bg-black transition-all duration-300">
+        <Link
+          href="/contact"
+          className="flex justify-start bg-fuchsia-500 text-white py-2 px-4 rounded-md w-fit hover:bg-black transition-all duration-300"
+        >
           Contact us
-        </button>
+        </Link>
       </div>
       <img
         src={about.src}

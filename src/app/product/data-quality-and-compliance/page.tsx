@@ -2,6 +2,7 @@
 
 import bannerImage from "@/assets/illustration/data.png";
 import PageComparison from "@/components/comparison";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -40,9 +41,12 @@ function PageBanner({
           {subTitle}
         </h2>
         <p className="text-base w-full">{caption}</p>
-        <button className="flex justify-start bg-fuchsia-500 text-white py-2 px-4 rounded-md w-fit hover:bg-black transition-all duration-300">
-          Contact us
-        </button>
+        <Link
+          href="/contact"
+          className="flex justify-start bg-fuchsia-500 text-white py-2 px-4 rounded-md w-fit hover:bg-black transition-all duration-300"
+        >
+          Contact
+        </Link>
       </div>
       <img
         src={bannerImage}
