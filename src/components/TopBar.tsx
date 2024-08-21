@@ -257,41 +257,49 @@ function UseCasesNavigation() {
       <div>
         <h2 className="text-fuchsia-500 font-bold">HealthCare</h2>
         <ul className="list-none flex flex-col gap-2 text-sm">
-          <li>Genomics processing</li>
-          <li>Federated computing</li>
+          <Link href="/use-cases/genomics-processing">Genomics processing</Link>
+          <Link href="/use-cases/federated-computing">Federated computing</Link>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Financial services</h2>
         <ul className="list-none flex flex-col gap-2 text-sm">
-          <li>Reduce fraud and risk exposure</li>
-          <li>Regulatory compliance</li>
+          <Link href="/use-cases/fraud-risk-exposure">
+            Reduce fraud and risk exposure
+          </Link>
+          <Link href="/use-cases/regulatory-compliance">
+            Regulatory compliance
+          </Link>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Governement</h2>
         <ul className="list-none flex flex-col gap-2 text-sm">
-          <li>Sovereignty</li>
-          <li>Collaborative</li>
+          <Link href="/use-cases/sovereignty">Sovereignty</Link>
+          <Link href="/use-cases/collaborative">Collaborative</Link>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Industry</h2>
         <ul className="list-none flex flex-col gap-2 text-sm">
-          <li>Edge computing</li>
-          <li>Migration for Hadoop platforms</li>
+          <Link href="/use-cases/edge-computing">Edge computing</Link>
+          <Link href="/use-cases/migration-hadoop">
+            Migration for Hadoop platforms
+          </Link>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Defense</h2>
         <ul className="list-none flex flex-col gap-2 text-sm">
-          <li>Command & control, everywhere</li>
+          <Link href="/use-cases/command-control">
+            Command & control, everywhere
+          </Link>
         </ul>
       </div>
       <div>
         <h2 className="text-fuchsia-500 font-bold">Environment</h2>
         <ul className="list-none flex flex-col gap-2 text-xs">
-          <li>EcoOps</li>
+          <Link href="/use-cases/ecoops">EcoOps</Link>
         </ul>
       </div>
     </div>
