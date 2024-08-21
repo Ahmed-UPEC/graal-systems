@@ -16,13 +16,13 @@ export default function Footer({ callToActionBanner }: Readonly<FooterProps>) {
     <div className="bg-black relative">
       {callToActionBanner && (
         <div className="hidden sm:block ">
-          <div className="w-10/12 xl:container h-28 lg:h-32 absolute bg-fuchsia-500 left-0 right-0 -top-16 mx-auto flex flex-col md:flex-row justify-between items-center py-6 md:py-0 md:px-12 rounded-xl">
-            <p className="font-semibold text-white text-lg">
+          <div className="w-10/12 xl:container h-28 lg:h-32 absolute bg-fuchsia-500 left-0 right-0 -top-16 mx-auto flex flex-col md:flex-row justify-between items-center py-6 md:py-0 md:px-12 rounded-md">
+            <p className="font-medium text-white text-2xl">
               Start Building the future with Graal Systems
             </p>
             <Link
               href="/contact"
-              className="text-sm bg-white py-2 px-4 rounded-md flex gap-2 items-center hover:bg-black transition-all duration-300 hover:text-white"
+              className="text-sm bg-white py-2 px-4 rounded-md flex gap-2 items-center hover:bg-black transition-all duration-300 hover:text-white font-medium"
             >
               <span>Get started</span> <Icon icon="akar-icons:arrow-right" />
             </Link>

@@ -18,7 +18,7 @@ export default function PageComparison() {
         </p>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 mx-auto gap-6">
-        <div className="bg-fuchsia-400 hover:bg-fuchsia-500 transition-all duration-300 px-4 py-8 flex flex-col gap-8 rounded-xl">
+        <div className="bg-neutral-200/75 hover:bg-neutral-200 transition-all duration-300 px-4 py-8 flex flex-col gap-8 rounded-xl">
           <div className="flex justify-between items-center gap-4 px-4">
             <img src={logo.src} alt="graal illustation" className="max-w-24" />
             <span className="text-2xl font-semibold">vs</span>
@@ -33,7 +33,7 @@ export default function PageComparison() {
             <p className="uppercase font-semibold">Compare</p>
             <Link
               href="/comparison/databricks"
-              className="flex gap-2 items-center transition-all duration-300 bg-white text-fuchsia-800 px-4 py-2 rounded-md hover:scale-105"
+              className="flex gap-2 items-center transition-all duration-300 bg-white text-neutral-700 text-sm font-medium px-4 py-2 rounded-md hover:scale-105"
             >
               See more
               <Icon
@@ -45,7 +45,7 @@ export default function PageComparison() {
           </div>
         </div>
 
-        <div className="bg-fuchsia-400 hover:bg-fuchsia-500 transition-all duration-300 px-4 py-8 flex flex-col gap-8 rounded-xl">
+        <div className="bg-neutral-200/75 hover:bg-neutral-200 transition-all duration-300 px-4 py-8 flex flex-col gap-8 rounded-xl">
           <div className="flex justify-between items-center gap-4 px-4">
             <img src={logo.src} alt="graal illustation" className="max-w-24" />
             <span className="text-2xl font-semibold">vs</span>
@@ -60,7 +60,7 @@ export default function PageComparison() {
             <p className="uppercase font-semibold">Compare</p>
             <Link
               href="/comparison/snowflake"
-              className="flex gap-2 items-center transition-all duration-300 bg-white text-fuchsia-800 px-4 py-2 rounded-md hover:scale-105"
+              className="flex gap-2 items-center transition-all duration-300 bg-white text-neutral-700 text-sm font-medium px-4 py-2 rounded-md hover:scale-105"
             >
               See more
               <Icon
@@ -72,7 +72,7 @@ export default function PageComparison() {
           </div>
         </div>
 
-        <div className="bg-fuchsia-400 hover:bg-fuchsia-500 transition-all duration-300 px-4 py-8 flex flex-col gap-8 rounded-xl">
+        <div className="bg-neutral-200/75 hover:bg-neutral-200 transition-all duration-300 px-4 py-8 flex flex-col gap-8 rounded-xl">
           <div className="flex justify-between items-center gap-4 px-4">
             <img src={logo.src} alt="graal illustation" className="max-w-24" />
             <span className="text-2xl font-semibold">vs</span>
@@ -88,7 +88,7 @@ export default function PageComparison() {
             <p className="uppercase font-semibold">Compare</p>
             <Link
               href="/comparison/cloudera"
-              className="flex gap-2 items-center transition-all duration-300 bg-white text-fuchsia-800 px-4 py-2 rounded-md hover:scale-105"
+              className="flex gap-2 items-center transition-all duration-300 bg-white text-neutral-700 text-sm font-medium px-4 py-2 rounded-md hover:scale-105"
             >
               See more
               <Icon
