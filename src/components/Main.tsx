@@ -1,18 +1,26 @@
 "use client";
 
+import Link from "next/link";
+
+import { motion } from "framer-motion";
+
 import { Icon } from "@iconify/react";
 import { FlipWords } from "./ui/flip-words";
 
-import dashboard from "../assets/graal-systems-console.png";
 import { TracingBeam } from "./ui/tracing-beam";
 import { Card, Carousel } from "./ui/apple-cards-carousel";
 import { FloatingNav } from "./ui/floating-navbar";
 
-import { motion } from "framer-motion";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
-import Link from "next/link";
 
+import dashboard from "../assets/graal-systems-console.png";
+
+/**
+ * Landing Page for the Graal Systems website
+ * @returns
+ */
 export default function Main() {
+  // hidden navigation bar when scrolling back to the top
   const navItems = [
     {
       name: "Home",
@@ -61,7 +69,10 @@ export default function Main() {
     </div>
   );
 }
-
+/**
+ * Hero component underneath topbar
+ * @returns
+ */
 function GridHero() {
   return (
     <motion.div
@@ -81,6 +92,7 @@ function GridHero() {
           <p className="text-4xl sm:text-7xl font-bold">Graal Systems</p>
           <span className="text-2xl sm:text-5xl font-bold text-center">
             Your next generation
+            {/* FlipWords component to animate the words */}
             <FlipWords
               className="text-fuchsia-500"
               duration={6000}
@@ -102,7 +114,10 @@ function GridHero() {
     </motion.div>
   );
 }
-
+/**
+ * Platform components wrapped with the Tracing beam effect
+ * @returns
+ */
 function Platform() {
   return (
     <TracingBeam>
@@ -165,6 +180,10 @@ function Platform() {
   );
 }
 
+/**
+ * Features component
+ * @returns
+ */
 export function Features() {
   return (
     <div className="grid grid-cols-2 w-full mx-auto lg:grid-cols-4 gap-8 py-24">
@@ -250,6 +269,10 @@ export function Features() {
   );
 }
 
+/**
+ * AppleCards Carousel component with the different use cases
+ * @returns
+ */
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
@@ -794,6 +817,10 @@ const FinanceContent = () => {
   );
 };
 
+/**
+ * SupportedRuntimes component
+ * @returns
+ */
 function SupportedRuntimes() {
   return (
     <div className="container my-12" id="runtimes">
@@ -840,6 +867,10 @@ function SupportedRuntimes() {
   );
 }
 
+/**
+ * Trust component
+ * @returns
+ */
 function Trust() {
   return (
     <div className="container mx-auto my-24 mb-32" id="trust">

@@ -1,5 +1,8 @@
 "use client";
+
 import React, { useState } from "react";
+import Link from "next/link";
+
 import {
   motion,
   AnimatePresence,
@@ -7,7 +10,6 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export const FloatingNav = ({
   navItems,
@@ -72,10 +74,13 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-700 dark:border-black/[0.2] text-white dark:text-black px-4 py-2 rounded-full">
+        <Link
+          href="/contact"
+          className="border text-sm font-medium relative border-neutral-700 dark:border-black/[0.2] text-white dark:text-black px-4 py-2 rounded-full"
+        >
           <span>Book a demo</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-fuchsia-500 to-transparent h-px" />
-        </button>
+        </Link>
       </motion.div>
     </AnimatePresence>
   );

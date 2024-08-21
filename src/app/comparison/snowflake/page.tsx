@@ -1,3 +1,5 @@
+"use client";
+
 import data from "../../../assets/illustration/data.png";
 import dataBis from "../../../assets/illustration/data_bis.png";
 

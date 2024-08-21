@@ -2,22 +2,20 @@
 
 import { useState, useEffect } from "react";
 
-import logo from "../assets/logo-black.svg";
-
-import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
 import {
@@ -27,17 +25,30 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import Link from "next/link";
+import logo from "../assets/logo-black.svg";
 
 interface TopBarProps {
   preTopBar?: boolean;
 }
+/**
+ * Topbar component
+ * @param preTopBar : boolean - if true, display the top bar with the contact information
+ * @returns
+ */
+export default function TopBar({ preTopBar = false }: Readonly<TopBarProps>) {
+  const pathname = usePathname();
 
-export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
+  let topbarAnimation = null;
+  if (pathname === "/") {
+    // add path name for which you need a animation on top bar : pathname === "/" here only the landing page has animation
+    topbarAnimation = true;
+  } else {
+    topbarAnimation = false;
+  }
+
+  // Responsive menu
   const [isClient, setIsClient] = useState(false);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [windowDimensions, setWindowDimensions] = useState({
     width: 0,
     height: 0,
@@ -70,11 +81,7 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
   return (
     <>
       {windowDimensions.width > 1024 ? (
-        <motion.div
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <PageAnimationController isAnimate={topbarAnimation}>
           {preTopBar && (
             <div className="bg-black text-white p-3">
               <ul className="flex flex-col items-center sm:flex-row sm:gap-6 gap-1 list-none">
@@ -175,7 +182,7 @@ export default function TopBar({ preTopBar }: Readonly<TopBarProps>) {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </PageAnimationController>
       ) : (
         <motion.div
           initial={{ y: -100 }}
@@ -496,5 +503,35 @@ function ProductNavigationResponsive() {
         </div>
       </div>
     </div>
+  );
+}
+
+interface PageDisclaimerBlockProps {
+  isAnimate: boolean;
+  children: React.ReactNode;
+}
+/**
+ * Current Page animation wrapper component
+ * @param isAnimate : boolean - if true, animate the topbar component
+ * @returns
+ */
+function PageAnimationController({
+  isAnimate,
+  children,
+}: Readonly<PageDisclaimerBlockProps>) {
+  return (
+    <>
+      {isAnimate ? (
+        <motion.div
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {children}
+        </motion.div>
+      ) : (
+        <div>{children}</div>
+      )}
+    </>
   );
 }

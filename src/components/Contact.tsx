@@ -1,10 +1,12 @@
+"use client";
+
 import { Icon } from "@iconify/react";
 
 import { Input } from "@/components/ui/input";
-
-import contact from "../assets/illustration/contact.png";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
+
+import contact from "../assets/illustration/contact.png";
 
 export default function Contact() {
   return (

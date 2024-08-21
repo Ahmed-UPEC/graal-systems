@@ -1,10 +1,16 @@
+"use client";
+
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 
 interface FooterProps {
   callToActionBanner: boolean;
 }
-
+/**
+ * Footer component
+ * @param callToActionBanner : boolean - if true, show the call to action banner (purple banner)
+ * @returns
+ */
 export default function Footer({ callToActionBanner }: Readonly<FooterProps>) {
   return (
     <div className="bg-black relative">
