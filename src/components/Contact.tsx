@@ -1,6 +1,9 @@
 "use client";
 
+import React, { useRef } from "react";
 import { Icon } from "@iconify/react";
+
+import emailjs from "@emailjs/browser";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "./ui/label";
@@ -9,6 +12,30 @@ import { Textarea } from "./ui/textarea";
 import contact from "../assets/illustration/contact.png";
 
 export default function Contact() {
+  const ContactForm = useRef<HTMLFormElement>(null);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_7aueaoo", "template_exyn1v4", ContactForm.current!, {
+        publicKey: "aS2_g2-jQgd5phceP",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          document.querySelector("form")?.reset();
+          document.getElementById("submit-message")!.innerText =
+            "Message sent successfully!";
+          setTimeout(() => {
+            document.getElementById("submit-message")!.innerText = "";
+          }, 5000);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <div className="grid grid-cols-1 xl:grid-cols-3 mx-auto my-24 gap-4 container">
       <div className="flex flex-col gap-2 justify-between">
@@ -30,19 +57,55 @@ export default function Contact() {
           <p>France</p>
         </div>
       </div>
-      <form className="flex flex-col justify-evenly">
-        <div>
-          <Label htmlFor="name">Name</Label>
-          <Input type="text" name="name" required />
+      <form
+        ref={ContactForm}
+        onSubmit={sendEmail}
+        className="flex flex-col justify-evenly gap-4"
+        autoComplete="off"
+        id="contact-form"
+      >
+        <div className="flex flex-col">
+          <Label htmlFor="name" className="text-base">
+            Name
+          </Label>
+          <Input
+            type="text"
+            name="from_name"
+            required
+            className="focus-visible:ring-transparent"
+          />
         </div>
-        <div>
-          <Label htmlFor="email">Email</Label>
+        <div className="flex flex-col">
+          <Label htmlFor="email" className="text-base">
+            Email
+          </Label>
 
-          <Input name="email" type="email" required />
+          <Input
+            name="from_email"
+            type="email"
+            required
+            className="focus-visible:ring-transparent"
+          />
         </div>
-        <div className="">
-          <Label htmlFor="message">Your email address</Label>
-          <Textarea name="message" required />
+        <div className="flex flex-col">
+          <Label htmlFor="message" className="text-base">
+            Message
+          </Label>
+          <Textarea
+            name="message"
+            required
+            className="focus-visible:ring-transparent"
+          />
+        </div>
+        <div className="flex justify-between items-center">
+          <button
+            type="submit"
+            className="bg-black hover:bg-neutral-200 hover:text-black transition-all duration-300 text-white text-sm py-2 px-4 rounded-md flex items-center"
+          >
+            Send &nbsp;
+            <Icon icon="formkit:submit" />
+          </button>
+          <p id="submit-message" className="text-fuchsia-500 font-medium"></p>
         </div>
       </form>
       <img

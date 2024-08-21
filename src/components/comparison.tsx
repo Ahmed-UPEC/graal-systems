@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function PageComparison() {
   return (
-    <div className="my-12 container">
+    <div className="my-12 mb-24 container">
       <div className="mx-auto text-center flex flex-col gap-4 pb-8 container">
         <h2 className="text-2xl font-semibold text-fuchsia-500">
           See how GraalSystems compares

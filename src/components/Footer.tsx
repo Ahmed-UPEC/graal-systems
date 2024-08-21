@@ -16,7 +16,7 @@ export default function Footer({ callToActionBanner }: Readonly<FooterProps>) {
     <div className="bg-black relative">
       {callToActionBanner && (
         <div className="hidden sm:block ">
-          <div className="w-10/12 xl:container h-28 lg:h-24 absolute bg-fuchsia-500 left-0 right-0 -top-12 mx-auto flex flex-col md:flex-row justify-between items-center py-3 md:py-0 md:px-12 rounded-xl">
+          <div className="w-10/12 xl:container h-28 lg:h-32 absolute bg-fuchsia-500 left-0 right-0 -top-16 mx-auto flex flex-col md:flex-row justify-between items-center py-6 md:py-0 md:px-12 rounded-xl">
             <p className="font-semibold text-white text-lg">
               Start Building the future with Graal Systems
             </p>
